@@ -81,4 +81,10 @@ Public Class Form1
             SelectItemMenu.Focus()
         End If
     End Sub
+
+    ' Count Item Listing
+    Private Sub CountItemListingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CountItemListingToolStripMenuItem.Click
+        Dim count As Integer = SelectItemMenu.Items.Count
+        MessageBox.Show($"Number of different inventory items: {count}", "Item Count", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
 End Class

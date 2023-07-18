@@ -71,7 +71,7 @@ Partial Class Form1
         ' ExitToolStripMenuItem
         ' 
         ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(180, 22)
+        ExitToolStripMenuItem.Size = New Size(93, 22)
         ExitToolStripMenuItem.Text = "&Exit"
         ' 
         ' InventoryToolStripMenuItem
