@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         MenuStrip1 = New MenuStrip()
         FileToolStripMenuItem = New ToolStripMenuItem()
         ExitToolStripMenuItem = New ToolStripMenuItem()
@@ -47,8 +48,15 @@ Partial Class Form1
         Label5 = New Label()
         TotalInventoryValueTextBox = New TextBox()
         InventoryItemListingTextBox = New TextBox()
+        FontDialog1 = New FontDialog()
+        ColorDialog1 = New ColorDialog()
+        ContextMenuStrip1 = New ContextMenuStrip(components)
+        ColorToolStripMenuItem = New ToolStripMenuItem()
+        FontToolStripMenuItem = New ToolStripMenuItem()
+        ExitToolStripMenuItem1 = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         GroupBox1.SuspendLayout()
+        ContextMenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' MenuStrip1
@@ -71,7 +79,7 @@ Partial Class Form1
         ' ExitToolStripMenuItem
         ' 
         ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(93, 22)
+        ExitToolStripMenuItem.Size = New Size(180, 22)
         ExitToolStripMenuItem.Text = "&Exit"
         ' 
         ' InventoryToolStripMenuItem
@@ -252,6 +260,30 @@ Partial Class Form1
         InventoryItemListingTextBox.Size = New Size(500, 196)
         InventoryItemListingTextBox.TabIndex = 8
         ' 
+        ' ContextMenuStrip1
+        ' 
+        ContextMenuStrip1.Items.AddRange(New ToolStripItem() {ColorToolStripMenuItem, FontToolStripMenuItem, ExitToolStripMenuItem1})
+        ContextMenuStrip1.Name = "ContextMenuStrip1"
+        ContextMenuStrip1.Size = New Size(181, 92)
+        ' 
+        ' ColorToolStripMenuItem
+        ' 
+        ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
+        ColorToolStripMenuItem.Size = New Size(180, 22)
+        ColorToolStripMenuItem.Text = "Color"
+        ' 
+        ' FontToolStripMenuItem
+        ' 
+        FontToolStripMenuItem.Name = "FontToolStripMenuItem"
+        FontToolStripMenuItem.Size = New Size(180, 22)
+        FontToolStripMenuItem.Text = "Font"
+        ' 
+        ' ExitToolStripMenuItem1
+        ' 
+        ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
+        ExitToolStripMenuItem1.Size = New Size(180, 22)
+        ExitToolStripMenuItem1.Text = "Exit"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -269,6 +301,7 @@ Partial Class Form1
         MenuStrip1.PerformLayout()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        ContextMenuStrip1.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -298,4 +331,10 @@ Partial Class Form1
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InventoryItemListingTextBox As TextBox
+    Friend WithEvents FontDialog1 As FontDialog
+    Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents ColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
 End Class
